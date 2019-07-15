@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+ 
+ 
+  {% block body %}
+
+  <h1 style="text-align: center">Supprimer service</h1>
+      <table border=1px class="table table-dark">
+  <thead>
+  <th scope="col">ID service</th>
+  <th scope="col">Nom service</th>
+  <th scope="col">Supprimer</th>
+  </thead>
+  {% for services in service %}
+  <tr>
+    <td>{{services.id}}</td>
+    <td>{{services.libelle}}</td>
+   <td>
+  <a href="/service/{{services.id}}/supprimerserv" class="btn btn-success ">supprimer</a>
+  </td>
+  </tr>
+      
+  {% endfor %}
+      </table>
+  {% endblock %}

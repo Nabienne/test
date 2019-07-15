@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+{# {% formEMP_theme formEMPEMP 'bootstrap_4_layout.html.twig' %} #}
+
+
+{% block body  %}
+            <h1 style="text-align:center"> formulaire d'ajout!</h1>
+            {{form_start(formEMP)}}
+            {{form_widget(formEMP)}}
+            <button type="submit" class="btn btn-success">
+            {% if editMode %}
+            Enregistrer les modifications
+            {% else %}
+                
+            Ajouter un employer
+            {% endif %}
+           </button>
+           {{form_end(formEMP)}}
+
+{% endblock %}

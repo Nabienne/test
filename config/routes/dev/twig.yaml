@@ -1,0 +1,5 @@
+
+_errors:
+    resource: '@TwigBundle/Resources/config/routing/errors.xml'
+    prefix: /_error
+    # form_themes:['bootstrap_4_layout.html.twig']

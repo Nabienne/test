@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+ 
+ 
+  {% block body %}
+
+  <h1 style="text-align: center">Modifier un service</h1>
+      <table border=1px class="table table-dark">
+  <thead>
+  <th scope="col">ID service</th>
+  <th scope="col">Nom service</th>
+  <th scope="col"> Modifier</th>
+  </thead>
+  {% for services in service %}
+  <tr>
+  <td>{{services.id}}</td>
+  <td>{{services.libelle}}</td>
+ 
+  <td>
+  <a href="/service/{{services.id}}/formulaireserv" class="btn btn-success ">modifier</a>
+  </td>
+  </tr>
+      
+  {% endfor %}
+      </table>
+  {% endblock %}

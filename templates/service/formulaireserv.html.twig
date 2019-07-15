@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{# {% form_theme formSER 'bootstrap_4_layout.html.twig' %} #}
+
+{% block body  %}
+            <h1 style="text-align:center"> Formulaire d'ajout!</h1>
+         
+             {{form_start(formSER)}}
+           
+            {{form_widget(formSER)}}
+              <button type="submit" class="btn btn-success">
+            {% if editMode %}
+            Enregistrer les modifications
+            {% else %}
+                
+            Ajouter un service
+            {% endif %}
+           </button>{{form_end(formSER)}} 
+{% endblock %}

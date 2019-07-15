@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+ 
+ 
+  {% block body %}
+
+  <h1 style="text-align: center"> Les employer</h1>
+      <table border=1px class="table table-dark">
+  <thead>
+  <th scope="col">Matricule</th>
+  <th scope="col">Nom complet</th>
+  <th scope="col">Date de naissance</th>
+  <th scope="col">Salaire</th>
+  <th scope="col">Service</th>
+  </thead>
+  {% for employer in employe %}
+  <tr>
+  <td>{{employer.matricule}}</td>
+  <td>{{employer.nomComplet}}</td>
+  <td>{{employer.dateNaissance | date('d/m/Y')}}</td>
+  <td>{{employer.salaire}}</td>
+  <td>{{employer.service.libelle}}</td>
+  </tr>
+      
+  {% endfor %}
+      </table>
+  {% endblock %}
