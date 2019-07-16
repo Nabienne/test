@@ -27,12 +27,12 @@ class ServiceController extends AbstractController
     {
         $employe=$liste->findAll();
         return $this->render('service/modifemp.html.twig', [
-            'controller_name' => 'ServiceController',
             'employe'  => $employe
         ]);
     }
 
      /**
+      * +-
      * @Route("/service", name="listservice")
      */
     public function service(ServiceRepository $liste)
@@ -46,7 +46,7 @@ class ServiceController extends AbstractController
 
      /**
      * @Route("/service/modifemp", name="modifEmp")
-     */
+     */ 
     public function modifEmp(EmployerRepository $liste)
     {
         $employe=$liste->findAll();
@@ -121,7 +121,7 @@ class ServiceController extends AbstractController
 
 
     /**
-     * @Route("/", name="accueil")
+     * @Route("/accueil", name="accueil")
      */
     public function accueil()
     {
